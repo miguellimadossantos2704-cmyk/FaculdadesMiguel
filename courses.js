@@ -1,0 +1,237 @@
+const courses = [
+    // --- TI & Tecnologia ---
+    {
+        id: 1,
+        title: "Ciência da Computação",
+        university: "MIT Tech",
+        category: "ti",
+        categoryDisplay: "Tecnologia",
+        description: "Formação completa em algoritmos, IA e engenharia de software.",
+        duration: "3200h",
+        programDuration: "4 Anos",
+        courseCount: "42 Disciplinas",
+        rating: 4.9,
+        image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=800",
+        premium: true
+    },
+    {
+        id: 2,
+        title: "Engenharia de Software",
+        university: "Stanford Soft",
+        category: "ti",
+        categoryDisplay: "Tecnologia",
+        description: "Arquitetura de sistemas, cloud computing e liderança técnica.",
+        duration: "3600h",
+        programDuration: "5 Anos",
+        courseCount: "48 Disciplinas",
+        rating: 5.0,
+        image: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&fit=crop&q=80&w=800",
+        premium: true
+    },
+    {
+        id: 3,
+        title: "Cibersegurança Ofensiva",
+        university: "Cyber Defense Inst",
+        category: "ti",
+        categoryDisplay: "Tecnologia",
+        description: "Red Team, Pentest e defesa cibernética avançada.",
+        duration: "200h",
+        programDuration: "2 Anos",
+        courseCount: "14 Módulos",
+        rating: 4.8,
+        image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=800",
+        premium: true
+    },
+
+    // --- Saúde & Medicina ---
+    {
+        id: 10,
+        title: "Medicina",
+        university: "Harvard Med",
+        category: "health",
+        categoryDisplay: "Saúde",
+        description: "Bacharelado completo em Medicina com internato garantido.",
+        duration: "7200h",
+        programDuration: "6 Anos",
+        courseCount: "80 Disciplinas",
+        rating: 5.0,
+        image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=800",
+        premium: true
+    },
+    {
+        id: 11,
+        title: "Enfermagem Avançada",
+        university: "Johns Hopkins",
+        category: "health",
+        categoryDisplay: "Saúde",
+        description: "Cuidado intensivo, gestão hospitalar e urgência.",
+        duration: "4000h",
+        programDuration: "4 Anos",
+        courseCount: "50 Disciplinas",
+        rating: 4.8,
+        image: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=800",
+        premium: true
+    },
+    {
+        id: 12,
+        title: "Psicologia Clínica",
+        university: "Yale Psy",
+        category: "health",
+        categoryDisplay: "Saúde",
+        description: "Estudo da mente humana, terapia cognitivo-comportamental e neurociência.",
+        duration: "3800h",
+        programDuration: "5 Anos",
+        courseCount: "45 Disciplinas",
+        rating: 4.9,
+        image: "https://images.unsplash.com/photo-1527613426441-4da17471b66d?auto=format&fit=crop&q=80&w=800",
+        premium: true
+    },
+
+    // --- Direito ---
+    {
+        id: 20,
+        title: "Direito",
+        university: "Cambridge Law",
+        category: "law",
+        categoryDisplay: "Direito",
+        description: "Formação jurídica completa: Civil, Penal, Constitucional e Trabalhista.",
+        duration: "3800h",
+        programDuration: "5 Anos",
+        courseCount: "55 Disciplinas",
+        rating: 4.9,
+        image: "https://images.unsplash.com/photo-1589829085413-56de8ae18c73?auto=format&fit=crop&q=80&w=800",
+        premium: true
+    },
+    {
+        id: 21,
+        title: "Relações Internacionais",
+        university: "Oxford Int",
+        category: "law",
+        categoryDisplay: "Humanas",
+        description: "Diplomacia, geopolítica e comércio exterior.",
+        duration: "3000h",
+        programDuration: "4 Anos",
+        courseCount: "40 Disciplinas",
+        rating: 4.7,
+        image: "https://images.unsplash.com/photo-1526304640152-d2922669055e?auto=format&fit=crop&q=80&w=800",
+        premium: false
+    },
+
+    // --- Engenharia ---
+    {
+        id: 30,
+        title: "Engenharia Civil",
+        university: "MIT Eng",
+        category: "eng",
+        categoryDisplay: "Engenharia",
+        description: "Projetos estruturais, hidráulica e grandes construções.",
+        duration: "4000h",
+        programDuration: "5 Anos",
+        courseCount: "60 Disciplinas",
+        rating: 4.8,
+        image: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&q=80&w=800",
+        premium: true
+    },
+    {
+        id: 31,
+        title: "Engenharia Mecânica",
+        university: "Stanford Eng",
+        category: "eng",
+        categoryDisplay: "Engenharia",
+        description: "Termodinâmica, robótica e design automotivo.",
+        duration: "4100h",
+        programDuration: "5 Anos",
+        courseCount: "62 Disciplinas",
+        rating: 4.9,
+        image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=800",
+        premium: true
+    },
+
+    // --- Negócios ---
+    {
+        id: 40,
+        title: "Administração",
+        university: "Harvard Business",
+        category: "business",
+        categoryDisplay: "Negócios",
+        description: "Gestão estratégica, liderança e empreendedorismo.",
+        duration: "3000h",
+        programDuration: "4 Anos",
+        courseCount: "40 Disciplinas",
+        rating: 4.7,
+        image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=800",
+        premium: false
+    },
+    {
+        id: 41,
+        title: "Economia & Finanças",
+        university: "LSE Econ",
+        category: "business",
+        categoryDisplay: "Negócios",
+        description: "Mercado financeiro, macroeconomia e investimentos.",
+        duration: "3200h",
+        programDuration: "4 Anos",
+        courseCount: "42 Disciplinas",
+        rating: 4.9,
+        image: "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?auto=format&fit=crop&q=80&w=800",
+        premium: true
+    },
+
+    // --- Outros ---
+    {
+        id: 50,
+        title: "Design Gráfico & UX",
+        university: "Rhode Island Design",
+        category: "design",
+        categoryDisplay: "Design",
+        description: "Criação visual, branding e experiência do usuário.",
+        duration: "2400h",
+        programDuration: "3 Anos",
+        courseCount: "30 Disciplinas",
+        rating: 4.8,
+        image: "https://images.unsplash.com/photo-1572044162444-ad60f128bdea?auto=format&fit=crop&q=80&w=800",
+        premium: true
+    },
+    {
+        id: 51,
+        title: "Arquitetura e Urbanismo",
+        university: "Bauhaus",
+        category: "design",
+        categoryDisplay: "Arquitetura",
+        description: "Planejamento urbano, design de interiores e paisagismo.",
+        duration: "3800h",
+        programDuration: "5 Anos",
+        courseCount: "50 Disciplinas",
+        rating: 4.9,
+        image: "https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&q=80&w=800",
+        premium: true
+    },
+    {
+        id: 60,
+        title: "Engenharia Matemática",
+        university: "Polytechnique",
+        category: "math",
+        categoryDisplay: "Matemática",
+        description: "Modelagem matemática avançada para problemas complexos.",
+        duration: "3200h",
+        programDuration: "4 Anos",
+        courseCount: "40 Disciplinas",
+        rating: 4.8,
+        image: "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?auto=format&fit=crop&q=80&w=800",
+        premium: true
+    },
+    {
+        id: 61,
+        title: "Inglês para Negócios",
+        university: "Cambridge Eng",
+        category: "english",
+        categoryDisplay: "Idiomas",
+        description: "Domínio do idioma para o ambiente corporativo.",
+        duration: "200h",
+        programDuration: "1 Ano",
+        courseCount: "12 Módulos",
+        rating: 4.6,
+        image: "https://images.unsplash.com/photo-1546410531-bb4caa6b424d?auto=format&fit=crop&q=80&w=800",
+        premium: false
+    }
+];
